@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         btn_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, activity_class.class); // 연결할 액티비티 클래스 이름
+                Intent intent = new Intent(getApplicatoinContext(), activity_class.class); // 연결할 액티비티 클래스 이름
                 startActivity(intent);
             }
         });
