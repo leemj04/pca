@@ -1,16 +1,16 @@
-public class Adapter_name extends RecyclerView.Adapter<Adapter_name.ViewHolder> { // adapter 이름 정해주세요
+public class Adapter_class extends RecyclerView.Adapter<Adapter_class.ViewHolder> { // adapter 이름 정해주세요
 
     private ArrayList<item_class> item_list_name; // item_class 다른 파일로 만들어 둘것(맨 아래에 예시), item_list_name은 변수명
 
     @NonNull
     @Override
-    public Adapter_name.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Adapter_class.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_id, parent, false); // recyclerview의 id
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter_name.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter_class.ViewHolder holder, int position) {
         holder.onBind(item_list_name.get(position));
     }
 
