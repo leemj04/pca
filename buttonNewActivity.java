@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         btn_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, new_activity_name.class); // 연결할 새로운 액티비티 이름
+                Intent intent = new Intent(this, activity_class.class); // 연결할 액티비티 클래스 이름
                 startActivity(intent);
             }
         });
@@ -31,13 +31,13 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View temp = inflater.inflate(R.layout.fragment_name, container, false); // 현재 fragment의 이름, inflater는 하나만 있어도 됨
+        View temp = inflater.inflate(R.layout.fragment_layout, container, false); // 현재 fragment의 layout이름, inflater는 하나만 있어도 됨
         
         btn_name = temp.findViewById(R.id.btn_id); // 연결할 버튼 아이디
         btn_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), new_activity_name.class); // 연결할 새로운 액티비티 이름
+                Intent intent = new Intent(getContext(), activity_class.class); // 연결할 액티비티 클래스 이름
                 startActivity(intent);
             }
         });
