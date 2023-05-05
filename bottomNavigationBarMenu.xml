@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/activityNameBottomMenu1" // id 지정
+        android:enabled="true" // 클릭 가능
+        android:icon="@drawable/icon_png_filename" // 아이콘 이미지 파일 이름
+        android:title="" // 아이콘 밑에 텍스트
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/activityNameBottomMenu2"
+        android:enabled="true"
+        android:icon="@drawable/icon2_png_filename"
+        android:title=""
+        app:showAsAction="ifRoom"
+        />
+
+</menu>
