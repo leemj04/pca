@@ -1,0 +1,7 @@
+
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'build.gradle'
+: 모듈 수준 gradle에 allproject를 추가했을 때 발생할 수 있음
+
+원인: gradle 업데이트로 새로우 항목이 추가되 중복됨
+해결)
+settings.gradle 파일에서 dependencyResolutionManagement 안에 있는 repositories 항목과 allproject 내부의 repositories 항목 내용이 겹치지 않도록 하나를 지워줌
