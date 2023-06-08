@@ -1,7 +1,7 @@
 LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
-// main_layout이 팝업창을 띄울 화면(배경)
-View popupView = inflater.inflate(R.layout.main_layout, null);
+// popup_layout이 팝업창으로 불러올 화면
+View popupView = inflater.inflate(R.layout.popup_layout, null);
 
 // ConstraintLayout 부분은 어떤 Layout인지 따라 달라짐, LinearLayout이면 LinearLayout.~~ 이런식
 int width = ConstraintLayout.LayoutParams.MATCH_PARENT;
