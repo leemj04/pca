@@ -1,0 +1,4 @@
+intent.setFlags(flags)
+flag는 |를 통해 여러 개를 겹칠 수 있다.
+
+FLAG_ACTIVITY_NEN_TASK | FLAG_ACTIVITY_CLEAR_TASK : activity stack을 clear
