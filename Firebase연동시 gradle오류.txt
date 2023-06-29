@@ -5,3 +5,24 @@ Build was configured to prefer settings repositories over project repositories b
 원인: gradle 업데이트로 새로우 항목이 추가되 중복됨
 해결)
 settings.gradle 파일에서 dependencyResolutionManagement 안에 있는 repositories 항목과 allproject 내부의 repositories 항목 내용이 겹치지 않도록 하나를 지워줌
+
+=======================================================
+
+모듈 수준 build.gradle
+plugins {
+    ...
+    id 'com.google.gms.google-services' version '4.3.15' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+앱 수준 build.gradle
+dependencies {
+    ...
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+}
